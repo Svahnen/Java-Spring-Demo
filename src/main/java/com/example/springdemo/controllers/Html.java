@@ -5,9 +5,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class List {
-    @RequestMapping("/list")
-    public String list(@RequestParam java.util.List<String> id) {
-        return "ids: " + id;
+public class Html {
+    @RequestMapping("/html")
+    public String func(@RequestParam String name) {
+        return "<h1>Hello there " + name + "</h1>";
     }
 }

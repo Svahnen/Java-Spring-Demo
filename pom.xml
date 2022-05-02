@@ -13,7 +13,7 @@
     <name>spring-demo</name>
     <description>spring-demo</description>
     <properties>
-        <java.version>11</java.version>
+        <java.version>17</java.version>
     </properties>
     <dependencies>
         <dependency>
@@ -60,7 +60,7 @@
         <repository>
             <id>target</id>
             <name>Target Repo</name>
-            <url>file:///home/svahnen/Projects/system-integration/spring-demo/target</url>
+            <url>file:///home/svahnen/Projects/system-integration/Java-Spring-Demo/target</url>
         </repository>
     </distributionManagement>
 </project>

@@ -8,6 +8,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class QueryDemo {
     @RequestMapping("/query") //http://localhost:8080/query?name=svahnen
     public String Query(@RequestParam String name) {
-        return "Hello there: " + name;
+        return "Hello there " + name;
     }
 }

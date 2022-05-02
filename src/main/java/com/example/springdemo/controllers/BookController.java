@@ -5,6 +5,8 @@ import com.example.springdemo.models.BookLombok;
 import com.example.springdemo.models.BooksDao;
 
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
@@ -28,6 +30,19 @@ public class BookController {
     public void deleteBook(@PathVariable int idNr) {
         BooksDao booksDao = BooksDao.getInstance();
         booksDao.deleteBook(idNr);
+    }
+
+    /*     
+    localhost:8080/book/add?title=New-Book&author=Svahnen
+    {
+        "title": "test",
+        "author": "Svahnen"
+    }
+    */
+    @PostMapping("/book/add")
+    public void addBook(@RequestBody Book book) {
+        BooksDao booksDao = BooksDao.getInstance();
+        booksDao.addBook(book.getTitle(), book.getAuthor());
     }
 
     @RequestMapping("/booklombok")

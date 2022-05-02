@@ -20,8 +20,8 @@ public class BooksDao {
         return books;
     }
 
-    public void addBook(Book book) {
-        books.add(book);
+    public void addBook(String title, String author) {
+        books.add(new Book(title, author, idNr++));
     }
 
     public void deleteBook(int idNr) {

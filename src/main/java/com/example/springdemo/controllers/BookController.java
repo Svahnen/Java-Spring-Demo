@@ -27,22 +27,24 @@ public class BookController {
     }
 
     @RequestMapping("/book/{idNr}/delete")
-    public void deleteBook(@PathVariable int idNr) {
+    public String deleteBook(@PathVariable int idNr) {
         BooksDao booksDao = BooksDao.getInstance();
         booksDao.deleteBook(idNr);
+        return "Book with idNr " + idNr + " deleted";
     }
 
     /*     
-    localhost:8080/book/add?title=New-Book&author=Svahnen
+    localhost:8080/book/add
     {
         "title": "test",
         "author": "Svahnen"
     }
     */
     @PostMapping("/book/add")
-    public void addBook(@RequestBody Book book) {
+    public String addBook(@RequestBody Book book) {
         BooksDao booksDao = BooksDao.getInstance();
         booksDao.addBook(book.getTitle(), book.getAuthor());
+        return "Book added";
     }
 
     @RequestMapping("/booklombok")

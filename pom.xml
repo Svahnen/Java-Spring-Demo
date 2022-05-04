@@ -60,7 +60,7 @@
         <repository>
             <id>target</id>
             <name>Target Repo</name>
-            <url>file:///home/svahnen/Projects/system-integration/Java-Spring-Demo/target</url>
+            <url>file://target</url>
         </repository>
     </distributionManagement>
 </project>

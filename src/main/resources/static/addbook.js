@@ -14,4 +14,5 @@ document.getElementById("button").addEventListener("click", function () {
     xhr.setRequestHeader("Content-Type", "application/json")
     xhr.send(JSON.stringify(data()))
     console.log(JSON.stringify(data()))
+    alert("Book added")
 }) 

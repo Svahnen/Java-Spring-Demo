@@ -9,7 +9,7 @@ function data() {
 document.getElementById("button").addEventListener("click", function () {
     event.preventDefault()
     let xhr = new XMLHttpRequest()
-    let url = "http://localhost:8081/book/add"
+    let url = location.origin + "/book/add"
     xhr.open("POST", url, true)
     xhr.setRequestHeader("Content-Type", "application/json")
     xhr.send(JSON.stringify(data()))
